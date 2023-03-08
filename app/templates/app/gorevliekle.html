@@ -1,0 +1,57 @@
+
+{%extends "layout.html"%}
+{% load static %}
+
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+{% endblock %}
+
+{% block title %} Log  {% endblock %}
+
+{% block content %}<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+   
+        </div>
+<div class="bg-secondary rounded h-100 p-4">   
+    
+    {% include 'includes/_mesaj.html' %}
+
+
+        <h6 class="mb-4">Yeni Çalışan Ekle</h6> 
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Profil Ekle</label>
+                <input class="form-control bg-dark" type="file" id="formFile" name="image">
+                <div id="emailHelp" class="form-text">Yüklenen profil fotoğrafı bir daha değiştirilmez!</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">İsim</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="firstname">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Soyisim</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="lastname">
+                
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Kart Numarası</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="cardnum">
+                
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp"  name="email">
+            
+            <br>       
+            <button type="submit" class="btn btn-primary">Ekle</button>  <a href="{% url 'varolan'  %}" class="btn btn-primary">Kayıtlı Çalışan ekle</a>
+        </form>
+        {% if uploaded_file_url %}
+            <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+        {% endif %}
+
+
+</div></div></div></div>
+{% endblock %}

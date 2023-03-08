@@ -1,0 +1,43 @@
+<div class="row" style="margin-top:20px; margin-left:50px; margin-right:50px;">
+    <div class="col-12 col-lg-5">
+        <div class="card border-0 shadow">
+            <div class="card-header border-bottom d-flex align-items-center justify-content-between">
+                <h2 style="color: brown;" class="fs-5 fw-bold mb-0">Laboratuvardaki Görevliler</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush list my--3">
+                    {% for gorevli in gorevliler %}
+                    <li class="list-group-item px-0">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <!-- Avatar -->
+                                <a href="#" class="avatar">
+                                    <img class="img-fluid" alt="Image placeholder" src="{{gorevli.image.url}}" width="100" height="100">
+                                </a>
+                            </div>
+                            <div class="col-auto ms--2">
+                            <h4 class="h6 mb-0">
+                                    <a href="#">{{gorevli.first_name}} {{gorevli.last_name}}</a>
+                            </h4>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-danger dot rounded-circle me-1"></div>
+                                {% if gorevli.status == 0 %}
+                                <button type="button" class="btn btn-danger rounded-pill m-2"></button>
+                                <small>Offline  </small>
+                                {% else %}
+                                <button type="button" class="btn btn-success rounded-pill m-2"></button>
+                                <small>Online  </small>
+                                {% endif %}
+                                
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

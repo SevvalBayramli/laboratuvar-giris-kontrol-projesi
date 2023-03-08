@@ -1,0 +1,53 @@
+{%extends "layout.html"%}
+{% load static %}
+
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+{% endblock %}
+
+{% block title %} Log  {% endblock %}
+
+{% block content %}
+<br>
+{% include 'includes/_mesaj.html' %}
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Görevli Düzenle</h6>
+            <form method="POST" class="d-none d-md-flex ms-4">
+                {% csrf_token %}
+                <input class="form-control bg-dark border-0" type="search" placeholder="Soyisim" name="gorevliara">
+            </form>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white">
+                    <th scope="col">İsim</th>
+                    <th scope="col">Soyisim</th>
+                    <th scope="col">Email</th>
+                    <th scope="col"></th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for gorevli in gorevliler %}
+                            <tr>
+                                <td>{{gorevli.first_name}}</td>
+                                <td>{{gorevli.last_name}}</td>
+                                <td>{{gorevli.email}}</td>
+                                <td>
+                                    <a href="{% url 'edit' gorevli.id %}" class="btn btn-sm btn-success">Edit</a>
+                                    <a href="{% url 'sil' gorevli.id %}" class="btn btn-sm btn-primary" >Sil</a>
+                                </td>
+                            </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Recent Sales End -->
+
+{% endblock %}

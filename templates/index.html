@@ -1,0 +1,16 @@
+
+{%extends "layout.html"%}
+{% load static %}
+
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+{% endblock %}
+
+{% block title %} HomePage  {% endblock %}
+
+{% block content %}
+{% include 'includes/_navbar.html' %}
+
+{% include 'app/partials/_gorevli.html' %}
+    
+{% endblock %}
