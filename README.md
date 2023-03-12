@@ -69,6 +69,6 @@ Bu proje açık kaynaklıdır ve katkıda bulunmak isteyen herkes hoşgeldiniz. 
 ![ekle](https://user-images.githubusercontent.com/72937239/223791552-4a5591a6-56c6-4ccd-b44e-a98097a747c5.PNG)
 ![log](https://user-images.githubusercontent.com/72937239/223791557-a28229dc-dab4-4338-b7bc-98c8d0de670a.PNG)
 ![var-olan](https://user-images.githubusercontent.com/72937239/223791559-d2dfd1a6-e346-4927-bd35-da6d2da9cb6b.PNG)
-![Capture](ht![ekle-alert](https://user-images.githubusercontent.com/72937239/223791625-f9831772-9c31-4055-9331-844045adce84.PNG)
+![ekle-alert](https://user-images.githubusercontent.com/72937239/223791625-f9831772-9c31-4055-9331-844045adce84.PNG)
 ![ekle-alert2](https://user-images.githubusercontent.com/72937239/223791629-6fbfe079-9c79-4289-aa0f-b3b93974a51c.PNG)
-tps://user-images.githubusercontent.com/72937239/223791602-37fd1331-f2c5-4f7f-ade2-ad1d70dd794e.PNG)
+![Capture](https://user-images.githubusercontent.com/72937239/223791602-37fd1331-f2c5-4f7f-ade2-ad1d70dd794e.PNG)
